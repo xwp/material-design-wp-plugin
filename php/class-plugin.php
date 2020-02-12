@@ -43,6 +43,13 @@ class Plugin extends Plugin_Base {
 	 * @action enqueue_block_editor_assets
 	 */
 	public function enqueue_editor_assets() {
+		wp_enqueue_style(
+			'material-theme-builder-wp-css',
+			$this->asset_url( 'assets/css/block-editor-compiled.css' ),
+			[],
+			$this->asset_version()
+		);
+		
 		wp_enqueue_script(
 			'material-theme-builder-wp-js',
 			$this->asset_url( 'assets/js/block-editor.js' ),

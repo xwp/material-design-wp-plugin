@@ -4,11 +4,13 @@
 composer.lock
 material-theme-builder.zip
 package-lock.json
+yarn.lock
 assets/css/*
 !assets/css/src/
 assets/js/*.js
 assets/js/*.asset.php
 assets/js/*.map
+assets/fonts/*
 bin/local-dev/mysql/
 bin/local-dev/wordpress/html/
 build/
