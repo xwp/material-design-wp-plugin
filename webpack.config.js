@@ -61,6 +61,13 @@ const blockEditor = {
 					'postcss-loader',
 				],
 			},
+			{
+				test: /\.(eot|svg|ttf|woff|woff2)(\??\#?v=[.0-9]+)?$/,
+				loader: 'file-loader?name=../fonts/[name].[ext]',
+				options: {
+					outputPath: '../fonts',
+				},
+			},
 		],
 	},
 	plugins: [

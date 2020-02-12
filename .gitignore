@@ -9,6 +9,7 @@ assets/css/*
 assets/js/*.js
 assets/js/*.asset.php
 assets/js/*.map
+assets/fonts/*
 build/
 node_modules/
 tests/coverage
