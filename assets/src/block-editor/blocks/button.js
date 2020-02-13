@@ -9,16 +9,18 @@ export const button = {
 		example: {},
 		edit() {
 			return (
-				<mwc-button id="myButton" raised icon="code">
+				<mwc-button raised icon="code">
 					Hello World
 				</mwc-button>
 			);
 		},
 		save() {
 			return (
-				<mwc-button id="myButton" raised icon="code">
-					Hello World
-				</mwc-button>
+				<div>
+					<mwc-button raised="true" icon="code">
+						Hello World
+					</mwc-button>
+				</div>
 			);
 		},
 	},
