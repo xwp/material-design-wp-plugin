@@ -164,9 +164,25 @@ const wpPolyfills = {
 	},
 };
 
+const front = {
+	...defaultConfig,
+	...sharedConfig,
+	entry: {
+		'web-components': './assets/src/block-editor/front.js',
+	},
+	plugins: [
+		...defaultConfig.plugins,
+		new WebpackBar( {
+			name: 'Google Material Web Components',
+			color: '#1773a8',
+		} ),
+	],
+};
+
 module.exports = [
 	// prettier-ignore
 	blockEditor,
+	front,
 	classicEditor,
 	customizer,
 	wpPolyfills,

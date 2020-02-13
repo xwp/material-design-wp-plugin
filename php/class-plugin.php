@@ -38,18 +38,72 @@ class Plugin extends Plugin_Base {
 	}
 
 	/**
+	 * Register necessary assets.
+	 * 
+	 * @action init
+	 */
+	public function register_assets() {
+		wp_register_style( 
+			'google-font', 
+			'https://fonts.googleapis.com/css?family=Roboto:300,400,500', 
+			[], 
+			$this->asset_version() 
+		);
+
+		wp_register_style( 
+			'material-theme-builder-wp-css', 
+			$this->asset_url( 'assets/css/block-editor-compiled.css' ), 
+			[], 
+			$this->asset_version() 
+		);
+
+		wp_register_script( 
+			'webcomponents-legacy', 
+			$this->asset_url( 'node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js' ),
+			[],
+			$this->asset_version(),
+			true
+		);
+
+		wp_register_script( 
+			'web-components', 
+			$this->asset_url( 'assets/js/web-components.js' ),
+			[ 'webcomponents-legacy' ],
+			$this->asset_version(),
+			true
+		);
+	}
+
+	/**
+	 * Enqueue necessary admin assets.
+	 * 
+	 * @action admin_enqueue_scripts
+	 */
+	public function load_admin_assets() {
+		wp_enqueue_style( 'google-font' );
+	}
+
+	/**
+	 * Enqueue necessary frontend assets.
+	 * 
+	 * @action wp_enqueue_scripts
+	 */
+	public function load_front_assets() {
+		wp_enqueue_style( 'google-font' );
+		wp_enqueue_style( 'material-theme-builder-wp-css' );
+		wp_enqueue_script( 'webcomponents-legacy' );
+		wp_enqueue_script( 'web-components' );
+	}
+
+	/**
 	 * Load Gutenberg assets.
 	 *
 	 * @action enqueue_block_editor_assets
 	 */
 	public function enqueue_editor_assets() {
-		wp_enqueue_style(
-			'material-theme-builder-wp-css',
-			$this->asset_url( 'assets/css/block-editor-compiled.css' ),
-			[],
-			$this->asset_version()
-		);
-		
+		wp_enqueue_style( 'material-theme-builder-wp-css' );
+		wp_enqueue_script( 'webcomponents-legacy' );
+
 		wp_enqueue_script(
 			'material-theme-builder-wp-js',
 			$this->asset_url( 'assets/js/block-editor.js' ),
