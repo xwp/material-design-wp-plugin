@@ -7,3 +7,7 @@
 .mdc-button--outlined:not(:disabled) {
 	border-color: inherit !important;
 }
+
+.material-icons {
+	font-family: var(--mdc-icon-font-family, "Material Icons") !important;
+}
