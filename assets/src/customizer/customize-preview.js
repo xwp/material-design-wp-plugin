@@ -19,6 +19,7 @@
 	const controls = window.parent._wpCustomizeSettings.controls;
 	const colorControls = {};
 	const typographyControls = {};
+	const iconCollectionControl = {};
 
 	Object.keys( controls ).forEach( control => {
 		const args = controls[ control ];
@@ -34,7 +35,13 @@
 		if ( args && !! args.cssVars ) {
 			typographyControls[ control ] = args.cssVars;
 		}
+
+		if ( args && !! args.cssVar && args.type === 'icon_radio' ) {
+			iconCollectionControl[ control ] = args.cssVar;
+		}
 	} );
+
+	// console.log('iconCollectionControl', iconCollectionControl)
 
 	/**
 	 * Add styles to elements in the preview pane.
@@ -65,6 +72,19 @@
 			styles += `${ colorControls[ control ] }: ${ parentApi(
 				control
 			).get() };`;
+		} );
+
+		Object.keys( iconCollectionControl ).forEach( control => {
+			const settingValue = parentApi( control ).get();
+			// let fontFamily = '';
+
+			if ( settingValue === 'filled' ) {
+				styles += `--mdc-icon-font-family: Material Icons`;
+			}
+
+			if ( settingValue === 'outlined' ) {
+				styles += `--mdc-icon-font-family: Material Icons Outlined`;
+			}
 		} );
 
 		styles = `:root {
@@ -120,29 +140,38 @@
 		} );
 	} );
 
+	// Generate preview styles and update icons font family.
+	Object.keys( iconCollectionControl ).forEach( control => {
+		parentApi( control, value => {
+			value.bind( () => {
+				generatePreviewStyles();
+			} );
+		} );
+	} );
+
 	parentApi( 'mtb_icon_collections', function( setting ) {
 		$( 'head' ).append(
-			'<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">'
+			'<link href="http://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">'
 		);
 
-		const handleIconSwitch = function( iconStyle ) {
-			const mdiClass =
-				'material-icons' + ( iconStyle === 'filled' ? '' : `-${ iconStyle }` );
-
-			$( '[class*="material-icons"]' )
-				.removeClass( ( _, classes ) =>
-					( classes.match( /material-icons(-[a-z-]+)?/g ) || [] ).join( ' ' )
-				)
-				.addClass( mdiClass );
-		};
-
-		const iconsInit = setInterval( function() {
-			if ( $( '[class*="material-icons"]' ).length ) {
-				handleIconSwitch( setting() );
-				clearInterval( iconsInit );
-			}
-		}, 100 );
-
-		setting.bind( handleIconSwitch );
+		// const handleIconSwitch = function( iconStyle ) {
+		// 	const mdiClass =
+		// 		'material-icons' + ( iconStyle === 'filled' ? '' : `-${ iconStyle }` );
+		//
+		// 	$( '[class*="material-icons"]' )
+		// 		.removeClass( ( _, classes ) =>
+		// 			( classes.match( /material-icons(-[a-z-]+)?/g ) || [] ).join( ' ' )
+		// 		)
+		// 		.addClass( mdiClass );
+		// };
+		//
+		// const iconsInit = setInterval( function() {
+		// 	if ( $( '[class*="material-icons"]' ).length ) {
+		// 		handleIconSwitch( setting() );
+		// 		clearInterval( iconsInit );
+		// 	}
+		// }, 100 );
+		//
+		// setting.bind( handleIconSwitch );
 	} );
 } )( jQuery );

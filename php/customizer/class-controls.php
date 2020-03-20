@@ -304,6 +304,7 @@ class Controls extends Module_Base {
 					'section'  => 'icons',
 					'priority' => 10,
 					'choices'  => $this->get_icon_collection_controls(),
+					'css_var'  => '--mdc-icon-font-family',
 				]
 			),
 		];
@@ -481,6 +482,7 @@ class Controls extends Module_Base {
 	 */
 	public function get_frontend_css() {
 		$color_vars   = '';
+		$icon_font_family = '';
 		$font_vars    = '';
 		$google_fonts = Google_Fonts::get_fonts();
 
@@ -501,13 +503,25 @@ class Controls extends Module_Base {
 			}
 		}
 
-		return ":root {\n{$color_vars}}\nhtml {\n{$font_vars}}";
+
+		$icon_font_family_value = $this->get_theme_mod( 'mtb_icon_collections' );
+
+		if ( $icon_font_family_value === 'filled' ) {
+			$icon_font_family .= esc_html( "\t--mdc-icon-font-family: Material Design;\n" );
+		}
+
+		if ( $icon_font_family_value === 'outlined' ) {
+			$icon_font_family .= esc_html( "\t--mdc-icon-font-family: Material Design Outlined;\n" );
+		}
+
+		return ":root {\n{$color_vars}\n{$icon_font_family}}\nhtml {\n{$font_vars}}";
 	}
 
 	/**
 	 * Get default value for a setting.
 	 *
 	 * @param  string $setting Name of the setting.
+	 *
 	 * @return mixed
 	 */
 	public function get_default( $setting ) {

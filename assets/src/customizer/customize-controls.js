@@ -507,22 +507,23 @@ import colorUtils from '../common/color-utils';
 		} );
 	} );
 
-	api.controlConstructor[ 'icon-radio' ] = api.Control.extend( {
+	api.controlConstructor.icon_radio = api.Control.extend( {
 		ready() {
 			const control = this;
 			$( 'input:radio', control.container ).change( function() {
 				const selection = $( this ).val();
+				console.log('control', control)
 				control.setting.set( selection );
 
-				const mdiClass =
-					'material-icons' +
-					( selection === 'filled' ? '' : `-${ selection }` );
-
-				$( '[class*="material-icons"]' )
-					.removeClass( ( _, className ) =>
-						( className.match( /material-icons(-[a-z]+)?/g ) || [] ).join( ' ' )
-					)
-					.addClass( mdiClass );
+				// const mdiClass =
+				// 	'material-icons' +
+				// 	( selection === 'filled' ? '' : `-${ selection }` );
+				//
+				// $( '[class*="material-icons"]' )
+				// 	.removeClass( ( _, className ) =>
+				// 		( className.match( /material-icons(-[a-z]+)?/g ) || [] ).join( ' ' )
+				// 	)
+				// 	.addClass( mdiClass );
 			} );
 		},
 	} );
