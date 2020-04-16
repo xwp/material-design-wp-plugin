@@ -146,9 +146,13 @@ describe( 'ButtonEdit', () => {
 		const toggle = container.querySelector( '.components-form-toggle__input' );
 
 		await fireEvent.click( toggle );
+
+		expect( props.setAttributes ).toHaveBeenCalledWith( {
+			rel: 'noreferrer noopener',
+		} );
+
 		expect( props.setAttributes ).toHaveBeenCalledWith( {
 			linkTarget: '_blank',
-			rel: 'noreferrer noopener',
 		} );
 	} );
 
@@ -166,9 +170,13 @@ describe( 'ButtonEdit', () => {
 		const toggle = container.querySelector( '.components-form-toggle__input' );
 
 		await fireEvent.click( toggle );
+
+		expect( props.setAttributes ).toHaveBeenCalledWith( {
+			rel: 'noreferrer noopener',
+		} );
+
 		expect( props.setAttributes ).toHaveBeenCalledWith( {
 			linkTarget: '_blank',
-			rel: 'noreferrer noopener',
 		} );
 	} );
 

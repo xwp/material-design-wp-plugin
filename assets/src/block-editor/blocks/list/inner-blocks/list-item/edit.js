@@ -10,6 +10,7 @@ import { ListContext } from '../../edit';
 import findIcon from '../../../../utils/find-icon';
 import ListItemText from '../../components/list-item-text';
 import IconPicker from '../../../../components/icon-picker';
+import LinkPanelSettings from '../../../../components/link-settings-panel';
 import genericAttributesSetter from '../../../../utils/generic-attributes-setter';
 
 /**
@@ -19,8 +20,8 @@ import { __ } from '@wordpress/i18n';
 import { createBlock } from '@wordpress/blocks';
 import { dispatch, select } from '@wordpress/data';
 import { InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, TextControl } from '@wordpress/components';
 import { useCallback, useContext, useEffect } from '@wordpress/element';
-import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
 
 const ListItemEdit = ( {
 	attributes: {
@@ -72,28 +73,11 @@ const ListItemEdit = ( {
 		return false;
 	};
 
-	/**
-	 * Handles setting linkTarget and rel based on the new tab toggle
-	 *
-	 * @param {string} value The value of the toggle.
-	 */
-	const onToggleOpenInNewTab = value => {
-		const newLinkTarget = value ? '_blank' : '';
-
-		let updatedRel = rel;
-		if ( newLinkTarget && ! rel ) {
-			updatedRel = 'noreferrer noopener';
-		} else if (
-			/* istanbul ignore next */ ! newLinkTarget &&
-			rel === 'noreferrer noopener'
-		) {
-			updatedRel = '';
-		}
-
-		setAttributes( {
-			linkTarget: newLinkTarget,
-			rel: updatedRel,
-		} );
+	const linkPanelProps = {
+		rel,
+		linkTarget,
+		onToggle: setter( 'linkTarget' ),
+		onChangeRel: setter( 'rel' ),
 	};
 
 	// Sync with parent icon settings
@@ -190,26 +174,16 @@ const ListItemEdit = ( {
 					</PanelBody>
 				) }
 
-				<PanelBody
-					title={ __( 'Link Settings', 'material-theme-builder' ) }
-					initialOpen={ true }
-				>
-					<TextControl
-						value={ url }
-						label={ __( 'URL', 'material-theme-builder' ) }
-						onChange={ setter( 'url' ) }
-					/>
-					<ToggleControl
-						label={ __( 'Open in new tab', 'material-theme-builder' ) }
-						onChange={ onToggleOpenInNewTab }
-						checked={ linkTarget === '_blank' }
-					/>
-					<TextControl
-						value={ rel }
-						label={ __( 'Link rel', 'material-theme-builder' ) }
-						onChange={ setter( 'rel' ) }
-					/>
-				</PanelBody>
+				<LinkPanelSettings
+					{ ...linkPanelProps }
+					fields={
+						<TextControl
+							value={ url }
+							label={ __( 'URL', 'material-theme-builder' ) }
+							onChange={ setter( 'url' ) }
+						/>
+					}
+				/>
 			</InspectorControls>
 		</>
 	);

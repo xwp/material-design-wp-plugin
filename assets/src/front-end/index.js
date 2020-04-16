@@ -4,14 +4,9 @@
 /**
  * External dependencies
  */
-import { MDCRipple } from '@material/ripple';
 import { MDCList } from '@material/list';
+import { MDCRipple } from '@material/ripple';
 import { MDCTabBar } from '@material/tab-bar';
-
-/**
- * Internal dependencies
- */
-import '../block-editor/blocks/hello-world/save.css';
 
 const initButtons = () => {
 	const buttons = document.querySelectorAll( '.mdc-button' );

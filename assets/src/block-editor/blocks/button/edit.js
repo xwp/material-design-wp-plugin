@@ -13,12 +13,7 @@ import {
 	ContrastChecker,
 	InspectorControls,
 } from '@wordpress/block-editor';
-import {
-	PanelBody,
-	ToggleControl,
-	TextControl,
-	RangeControl,
-} from '@wordpress/components';
+import { PanelBody, RangeControl } from '@wordpress/components';
 
 /**
  * Internal dependencies
@@ -31,6 +26,7 @@ import ImageRadioControl from '../../components/image-radio-control';
 import { BUTTON_STYLES, ICON_POSITIONS, BUTTON_TYPES } from './options';
 import MaterialColorPalette from '../../components/material-color-palette';
 import genericAttributesSetter from '../../utils/generic-attributes-setter';
+import LinkPanelSettings from '../../components/link-settings-panel';
 
 /**
  * Material button edit component.
@@ -55,25 +51,11 @@ const ButtonEdit = ( {
 } ) => {
 	const setter = genericAttributesSetter( setAttributes );
 
-	/**
-	 * Sets ref and linkTarget when the toggle is touched.
-	 *
-	 * @param {boolean} value Whether the toogle is on or off.
-	 */
-	const onToggleOpenInNewTab = value => {
-		const newLinkTarget = value ? '_blank' : '';
-
-		let updatedRel = rel;
-		if ( newLinkTarget && ! rel ) {
-			updatedRel = 'noreferrer noopener';
-		} else if ( ! newLinkTarget && rel === 'noreferrer noopener' ) {
-			updatedRel = '';
-		}
-
-		setAttributes( {
-			linkTarget: newLinkTarget,
-			rel: updatedRel,
-		} );
+	const linkPanelProps = {
+		rel,
+		linkTarget,
+		onToggle: setter( 'linkTarget' ),
+		onChangeRel: setter( 'rel' ),
 	};
 
 	/**
@@ -246,21 +228,8 @@ const ButtonEdit = ( {
 						) }
 					</PanelBody>
 				) }
-				<PanelBody
-					title={ __( 'Link Settings', 'material-theme-builder' ) }
-					initialOpen={ true }
-				>
-					<ToggleControl
-						label={ __( 'Open in new tab', 'material-theme-builder' ) }
-						onChange={ onToggleOpenInNewTab }
-						checked={ linkTarget === '_blank' }
-					/>
-					<TextControl
-						value={ rel }
-						label={ __( 'Link rel', 'material-theme-builder' ) }
-						onChange={ setter( 'rel' ) }
-					/>
-				</PanelBody>
+
+				<LinkPanelSettings { ...linkPanelProps } />
 			</InspectorControls>
 		</>
 	);

@@ -121,7 +121,6 @@ describe( 'Edit', () => {
 
 		// eslint-disable-next-line jest/prefer-strict-equal
 		expect( mockCalls[ mockCalls.length - 1 ][ 0 ] ).toEqual( {
-			linkTarget: '_blank',
 			rel: 'noreferrer noopener',
 		} );
 	} );
