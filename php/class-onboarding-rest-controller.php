@@ -84,6 +84,19 @@ class Onboarding_REST_Controller extends \WP_REST_Controller {
 				'schema' => [ $this, 'get_item_schema' ],
 			]
 		);
+
+		register_rest_route(
+			$this->namespace,
+			'/' . $this->rest_base . '/demo-blocks',
+			[
+				[
+					'methods'             => \WP_REST_Server::EDITABLE,
+					'callback'            => [ $this, 'demo_blocks' ],
+					'permission_callback' => [ $this, 'update_item_permissions_check' ],
+				],
+				'schema' => [ $this, 'get_item_schema' ],
+			]
+		);
 	}
 
 	/**
@@ -240,6 +253,30 @@ class Onboarding_REST_Controller extends \WP_REST_Controller {
 			'slug'   => 'demo-importer',
 			'name'   => 'Demo Importer',
 			'status' => esc_html( $result ),
+		];
+	}
+	
+	/**
+	 * Save a reference that view material blocks has been clicked
+	 *
+	 * @param  WP_REST_Request $request Full details about the request.
+	 * @return bool Result of setting saved.
+	 */
+	public function demo_blocks( $request ) {
+		$result = update_option( 'material_demo_blocks', true, false );
+
+		if ( ! $result ) {
+			return new \WP_Error(
+				'material_demo_blocks',
+				__( 'There was an issue updating material blocks demo status.', 'material-theme-builder' ),
+				[ 'status' => 500 ]
+			);
+		}
+
+		return [
+			'slug'   => 'demo-blocks',
+			'name'   => 'Demo Blocks',
+			'status' => $result ? 'success' : 'error',
 		];
 	}
 

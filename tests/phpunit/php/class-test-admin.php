@@ -132,9 +132,10 @@ class Test_Admin extends \WP_UnitTestCase {
 
 		$inline_js = wp_scripts()->get_data( 'material-gsm', 'data' );
 
-		// Assert inline js vars contains theme and content status.
+		// Assert inline js vars contains theme, content, and demo blocks status.
 		$this->assertRegexp( '/themeStatus/', $inline_js );
 		$this->assertRegexp( '/contentStatus/', $inline_js );
+		$this->assertRegexp( '/demoBlocks/', $inline_js );
 
 		if ( $screen ) {
 			set_current_screen( $screen );

@@ -203,6 +203,19 @@ class Plugin extends Plugin_Base {
 
 		return 'ok';
 	}
+	
+	/**
+	 * Check if material library has been seen
+	 *
+	 * @return string
+	 */
+	public function demo_blocks_status() {
+		if ( ! get_option( 'material_demo_blocks' ) ) {
+			return 'demo';
+		}
+
+		return 'ok';
+	}
 
 	/**
 	 * Redirect after activating.

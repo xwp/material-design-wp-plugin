@@ -28,7 +28,7 @@ export const Overview = () => {
 	};
 
 	const handleBlocksClick = () => {
-		dispatch( { type: ACTIONS.NEXT_STEP } );
+		dispatch( { type: ACTIONS.SET_DEMO_BLOCKS_SEEN } );
 	};
 
 	return (
@@ -115,6 +115,7 @@ export const Overview = () => {
 					link={ getConfig( 'customize' ) }
 					target="_blank"
 					onClick={ handleBlocksClick }
+					loading={ isLoading }
 				/>
 			</div>
 

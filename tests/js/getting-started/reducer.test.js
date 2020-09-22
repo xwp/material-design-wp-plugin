@@ -135,4 +135,14 @@ describe( 'Reducer', () => {
 
 		expect( result.contentStatus ).toStrictEqual( 'ok' );
 	} );
+
+	it( 'should update demo blocks status', () => {
+		const action = {
+			type: 'SET_DEMO_BLOCKS_SEEN',
+		};
+
+		const result = reducer( initialState, action );
+
+		expect( result.actionToInstall ).toStrictEqual( 'SET_DEMO_BLOCKS_SEEN' );
+	} );
 } );

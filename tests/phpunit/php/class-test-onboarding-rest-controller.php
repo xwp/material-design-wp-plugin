@@ -109,6 +109,9 @@ class Test_Onboarding_REST_Controller extends WP_Test_REST_Controller_Testcase {
 
 		$this->assertArrayHasKey( $this->get_route( '/install-content' ), static::$routes );
 		$this->assertCount( 1, static::$routes[ $this->get_route( '/install-content' ) ] );
+
+		$this->assertArrayHasKey( $this->get_route( '/demo-blocks' ), static::$routes );
+		$this->assertCount( 1, static::$routes[ $this->get_route( '/demo-blocks' ) ] );
 	}
 
 	/**
@@ -224,6 +227,31 @@ class Test_Onboarding_REST_Controller extends WP_Test_REST_Controller_Testcase {
 
 		$this->assertEquals( 'demo-importer', $data['slug'] );
 		$this->assertEquals( 'Demo Importer', $data['name'] );
+		$this->assertEquals( 'success', $data['status'] );
+	}
+
+	/**
+	 * Test test_demo_blocks().
+	 *
+	 * @see Importer_REST_Controller::demo_blocks()
+	 */
+	public function test_demo_blocks() {
+		wp_set_current_user( self::$subscriber_id );
+
+		$request  = new WP_REST_Request( 'POST', $this->get_route( '/demo-blocks' ) );
+		$response = rest_get_server()->dispatch( $request );
+		$data     = $response->get_data();
+
+		$this->assertEquals( 'material_rest_cannot_update', $data['code'] );
+		$this->assertEquals( 403, $data['data']['status'] );
+
+		wp_set_current_user( self::$admin_id );
+
+		$response = rest_get_server()->dispatch( $request );
+		$data     = $response->get_data();
+
+		$this->assertEquals( 'demo-blocks', $data['slug'] );
+		$this->assertEquals( 'Demo Blocks', $data['name'] );
 		$this->assertEquals( 'success', $data['status'] );
 	}
 

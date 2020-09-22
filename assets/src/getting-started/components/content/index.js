@@ -10,6 +10,7 @@ import { STATUS } from '../../../wizard/constants';
 import {
 	handleThemeActivation,
 	handleDemoImporter,
+	handleDemoBlocksSeen,
 } from '../../../wizard/utils';
 import Notice from '../../../wizard/components/notice';
 import TabContext from '../../context';
@@ -66,6 +67,12 @@ const Content = () => {
 		if ( ACTIONS.INSTALL_DEMO_CONTENT === actionToInstall ) {
 			handleDemoImporter()
 				.then( handleDemoSuccess )
+				.catch( handleError );
+		}
+
+		if ( ACTIONS.SET_DEMO_BLOCKS_SEEN === actionToInstall ) {
+			handleDemoBlocksSeen()
+				.then( handleClick )
 				.catch( handleError );
 		}
 	}, [ actionToInstall ] ); // eslint-disable-line

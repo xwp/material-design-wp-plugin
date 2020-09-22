@@ -141,6 +141,7 @@ class Admin extends Module_Base {
 					'redirect'      => esc_url( admin_url( 'themes.php' ) ),
 					'themeStatus'   => esc_html( $this->plugin->theme_status() ),
 					'contentStatus' => esc_html( $has_demo_content ? 'ok' : 'install' ),
+					'demoBlocks'    => esc_html( $this->plugin->demo_blocks_status() ),
 				]
 			);
 
@@ -151,6 +152,7 @@ class Admin extends Module_Base {
 					'restPath'    => esc_url( $this->plugin->onboarding_rest_controller->get_base_path() ),
 					'nonce'       => wp_create_nonce( 'wp_rest' ),
 					'themeStatus' => esc_html( $this->plugin->theme_status() ),
+					'demoBlocks'  => esc_html( $this->plugin->demo_blocks_status() ),
 				]
 			);
 		}

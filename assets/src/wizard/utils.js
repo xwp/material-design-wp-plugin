@@ -79,3 +79,28 @@ export const handleDemoImporter = () => {
 			.catch( error => reject( error ) );
 	} );
 };
+
+/**
+ * Set demo content as seen
+ */
+export const handleDemoBlocksSeen = () => {
+	return new Promise( ( resolve, reject ) => {
+		apiFetch( {
+			path: `${ getConfig( 'restPath' ) }demo-blocks`,
+			method: 'POST',
+			headers: {
+				'X-WP-Nonce': getConfig( 'nonce' ),
+			},
+		} )
+			.then( response => {
+				if ( response.code ) {
+					reject( response );
+				} else {
+					resolve( response );
+				}
+			} )
+			.catch( error => {
+				reject( error );
+			} );
+	} );
+};

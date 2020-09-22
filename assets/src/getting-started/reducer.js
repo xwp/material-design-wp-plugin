@@ -94,5 +94,17 @@ export const reducer = ( state, action ) => {
 		return { ...state, contentStatus: 'ok' };
 	}
 
+	if ( ACTIONS.SET_DEMO_BLOCKS_SEEN === type ) {
+		return {
+			...state,
+			actionToInstall: ACTIONS.SET_DEMO_BLOCKS_SEEN,
+			status: STATUS.PENDING,
+		};
+	}
+
+	if ( ACTIONS.ERROR === type ) {
+		return { ...state, status: STATUS.ERROR, error: payload };
+	}
+
 	return state;
 };

@@ -63,9 +63,19 @@ const Button = props => {
  * @param {*} props Inherited props
  */
 export const Link = props => {
-	const { style, text, leadingIcon, trailingIcon, link, onClick } = props;
+	const {
+		style,
+		text,
+		leadingIcon,
+		trailingIcon,
+		link,
+		onClick,
+		loading,
+	} = props;
 
 	const target = props.target || '_self';
+	const showLeadingIcon = ! loading && leadingIcon;
+	const showTrailingIcon = ! loading && trailingIcon;
 
 	return (
 		<a
@@ -74,7 +84,7 @@ export const Link = props => {
 			target={ target }
 			onClick={ onClick }
 		>
-			{ leadingIcon && (
+			{ showLeadingIcon && (
 				<i
 					className="material-icons mdc-button__icon leading-icon"
 					aria-hidden="true"
@@ -82,8 +92,12 @@ export const Link = props => {
 					{ leadingIcon }
 				</i>
 			) }
-			<span className="mdc-button__label">{ text }</span>
-			{ trailingIcon && (
+
+			{ ! loading && <span className="mdc-button__label">{ text }</span> }
+
+			{ loading && <Loader /> }
+
+			{ showTrailingIcon && (
 				<i
 					className="material-icons mdc-button__icon trailing-icon"
 					aria-hidden="true"

@@ -37,6 +37,16 @@ const Navigation = () => {
 				},
 			} );
 		}
+
+		if ( 'ok' === getConfig( 'demoBlocks' ) ) {
+			dispatch( { type: ACTIONS.GOTO_STEP, payload: { value: 'CUSTOMIZE' } } );
+			dispatch( {
+				type: ACTIONS.MARK_COMPLETE,
+				payload: {
+					value: [ 'WIZARD', 'OVERVIEW' ],
+				},
+			} );
+		}
 	}, [] ); // eslint-disable-line
 
 	return (
