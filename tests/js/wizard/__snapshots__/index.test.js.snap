@@ -213,6 +213,7 @@ exports[`Onboarding Wizard matches snapshot 1`] = `
             <a
               class="mdc-button material-wizard__close"
               href="http://example.com/wp-admin/plugins.php"
+              target="_self"
             >
               <span
                 class="mdc-button__label"

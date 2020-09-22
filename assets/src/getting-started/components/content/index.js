@@ -76,7 +76,7 @@ const Content = () => {
 				<Notice type="notice-error" message={ error.message } />
 			) }
 			{ 'WIZARD' === activeTab && <Wizard handleClick={ handleClick } /> }
-			{ 'OVERVIEW' === activeTab && <Overview handleClick={ handleClick } /> }
+			{ 'OVERVIEW' === activeTab && <Overview /> }
 			{ 'CUSTOMIZE' === activeTab && <Customize handleClick={ handleClick } /> }
 			{ 'LAYOUT' === activeTab && <Layout handleClick={ handleClick } /> }
 		</div>

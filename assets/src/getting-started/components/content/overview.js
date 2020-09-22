@@ -26,6 +26,11 @@ export const Overview = () => {
 			dispatch( { type: ACTIONS.ACTIVATE_THEME } );
 		}
 	};
+
+	const handleBlocksClick = () => {
+		dispatch( { type: ACTIONS.NEXT_STEP } );
+	};
+
 	return (
 		<Fragment>
 			<h2 className="material-gsm__content-title mdc-typography--headline6">
@@ -106,8 +111,10 @@ export const Overview = () => {
 				<Button
 					style="mdc-button--raised"
 					text={ __( 'View all Material Blocks', 'material-theme-builder' ) }
-					trailingIcon="navigate_next"
+					trailingIcon="launch"
 					link={ getConfig( 'customize' ) }
+					target="_blank"
+					onClick={ handleBlocksClick }
 				/>
 			</div>
 

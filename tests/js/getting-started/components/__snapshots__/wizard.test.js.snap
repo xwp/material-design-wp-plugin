@@ -21,6 +21,7 @@ Object {
         <a
           class="mdc-button mdc-button--raised"
           href="http://example.com"
+          target="_self"
         >
           <span
             class="mdc-button__label"
@@ -54,6 +55,7 @@ Object {
       <a
         class="mdc-button mdc-button--raised"
         href="http://example.com"
+        target="_self"
       >
         <span
           class="mdc-button__label"

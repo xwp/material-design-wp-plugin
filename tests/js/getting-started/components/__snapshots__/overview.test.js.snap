@@ -95,7 +95,7 @@ Object {
             aria-hidden="true"
             class="material-icons mdc-button__icon trailing-icon"
           >
-            navigate_next
+            launch
           </i>
         </button>
       </div>
@@ -195,7 +195,7 @@ Object {
           aria-hidden="true"
           class="material-icons mdc-button__icon trailing-icon"
         >
-          navigate_next
+          launch
         </i>
       </button>
     </div>
