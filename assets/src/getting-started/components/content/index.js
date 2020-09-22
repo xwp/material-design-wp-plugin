@@ -4,7 +4,7 @@
 import { useContext, useEffect } from '@wordpress/element';
 
 /**
- * WordPress dependencies
+ * Internal dependencies
  */
 import { STATUS } from '../../../wizard/constants';
 import {
@@ -16,6 +16,7 @@ import Notice from '../../../wizard/components/notice';
 import TabContext from '../../context';
 import { ACTIONS } from '../../constants';
 import { Wizard, Overview, Customize, Layout } from './content';
+import getConfig from '../../get-config';
 
 const Content = () => {
 	const { state, dispatch } = useContext( TabContext );
@@ -71,9 +72,14 @@ const Content = () => {
 		}
 
 		if ( ACTIONS.SET_DEMO_BLOCKS_SEEN === actionToInstall ) {
-			handleDemoBlocksSeen()
-				.then( handleClick )
-				.catch( handleError );
+			// If material library has already been seen, don't try to update again.
+			if ( 'ok' === getConfig( 'demoBlocks' ) ) {
+				handleClick();
+			} else {
+				handleDemoBlocksSeen()
+					.then( handleClick )
+					.catch( handleError );
+			}
 		}
 	}, [ actionToInstall ] ); // eslint-disable-line
 
