@@ -19,7 +19,7 @@
  */
 
 @import "select-woo/dist/css/selectWoo.css";
-@import "../../src/block-editor/components/material-color-palette/style.css";
+@import "../../js/src/block-editor/components/material-color-palette/style.css";
 @import "@wordpress/components/build-style/style.css";
 
 /* Collapsible section */

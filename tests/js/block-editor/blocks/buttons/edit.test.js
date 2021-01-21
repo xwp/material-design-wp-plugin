@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Edit from '../../../../../assets/src/block-editor/blocks/buttons/edit';
+import Edit from '../../../../../assets/js/src/block-editor/blocks/buttons/edit';
 
 /**
  * Render the component.

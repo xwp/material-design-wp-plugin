@@ -26,10 +26,10 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import Edit from '../../../../../assets/src/block-editor/blocks/cards-collection/edit';
+import Edit from '../../../../../assets/js/src/block-editor/blocks/cards-collection/edit';
 
 jest.mock(
-	'../../../../../assets/src/block-editor/components/with-id',
+	'../../../../../assets/js/src/block-editor/components/with-id',
 	() => ( {
 		withId: Component => Component,
 	} )

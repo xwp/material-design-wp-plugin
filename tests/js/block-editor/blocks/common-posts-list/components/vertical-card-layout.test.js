@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import VerticalCardLayout from '../../../../../../assets/src/block-editor/blocks/common-posts-list/components/vertical-card-layout';
+import VerticalCardLayout from '../../../../../../assets/js/src/block-editor/blocks/common-posts-list/components/vertical-card-layout';
 
 /**
  * Render the component.

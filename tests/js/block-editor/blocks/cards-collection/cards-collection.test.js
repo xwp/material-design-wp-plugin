@@ -21,9 +21,9 @@ import {
 	name,
 	settings,
 	metadata,
-} from '../../../../../assets/src/block-editor/blocks/cards-collection';
-import Edit from '../../../../../assets/src/block-editor/blocks/cards-collection/edit';
-import Save from '../../../../../assets/src/block-editor/blocks/cards-collection/save';
+} from '../../../../../assets/js/src/block-editor/blocks/cards-collection';
+import Edit from '../../../../../assets/js/src/block-editor/blocks/cards-collection/edit';
+import Save from '../../../../../assets/js/src/block-editor/blocks/cards-collection/save';
 
 describe( 'blocks: material/cards-collection', () => {
 	describe( 'name', () => {

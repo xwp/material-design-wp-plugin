@@ -23,8 +23,8 @@ import { render, cleanup } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import { Wizard } from '../../../../assets/src/getting-started/components/content/wizard';
-import { TabProvider } from '../../../../assets/src/getting-started/context';
+import { Wizard } from '../../../../assets/js/src/getting-started/components/content/wizard';
+import { TabProvider } from '../../../../assets/js/src/getting-started/context';
 
 const setup = () => {
 	return render(

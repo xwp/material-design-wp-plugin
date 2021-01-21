@@ -24,12 +24,12 @@ import { render, fireEvent } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import PostsPicker from '../../../../../../assets/src/block-editor/blocks/hand-picked-posts/components/posts-picker';
+import PostsPicker from '../../../../../../assets/js/src/block-editor/blocks/hand-picked-posts/components/posts-picker';
 
 // Mock PostsControl component as not relevant in this test and failing to pass tests
 // due to the SearchListControl WooCommerce component.
 jest.mock(
-	'../../../../../../assets/src/block-editor/components/posts-control/index.js',
+	'../../../../../../assets/js/src/block-editor/components/posts-control/index.js',
 	() => {
 		const PostsControl = () => <div />;
 		return PostsControl;

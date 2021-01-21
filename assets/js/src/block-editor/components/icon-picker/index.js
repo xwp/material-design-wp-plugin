@@ -25,7 +25,7 @@ import { TextControl, Tooltip } from '@wordpress/components';
  * Internal dependencies
  */
 import './style.css';
-import { icons as rawIcons } from '../../../../fonts/icons.json';
+import { icons as rawIcons } from '../../../../../fonts/icons.json';
 
 const icons = Object.keys( rawIcons );
 

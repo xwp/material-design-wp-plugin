@@ -24,7 +24,7 @@ import { shallow } from 'enzyme';
 /**
  * Internal dependencies
  */
-import CardSupportingText from '../../../../../../assets/src/block-editor/blocks/card/components/card-supporting-text';
+import CardSupportingText from '../../../../../../assets/js/src/block-editor/blocks/card/components/card-supporting-text';
 
 /**
  * Render the component.

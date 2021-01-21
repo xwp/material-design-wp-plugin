@@ -24,7 +24,7 @@ import { mount } from 'enzyme';
 /**
  * Internal dependencies
  */
-import PostsOrderbyControl from '../../../../assets/src/block-editor/components/post-order-by-control/index';
+import PostsOrderbyControl from '../../../../assets/js/src/block-editor/components/post-order-by-control/index';
 
 /**
  * Render the component.

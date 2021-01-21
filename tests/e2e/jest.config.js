@@ -38,6 +38,6 @@ module.exports = {
 		'<rootDir>/tests/js',
 		'<rootDir>/vendor',
 	],
-	collectCoverageFrom: [ '<rootDir>/assets/src/**/*.js' ],
+	collectCoverageFrom: [ '<rootDir>/assets/js/src/**/*.js' ],
 	reporters: [ 'default', 'jest-puppeteer-istanbul/lib/reporter' ],
 };

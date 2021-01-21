@@ -27,7 +27,7 @@ import {
 	MasonryIcon,
 	GridIcon,
 	ListIcon,
-} from '../../../../../../assets/src/block-editor/blocks/common-posts-list/components/style-icons';
+} from '../../../../../../assets/js/src/block-editor/blocks/common-posts-list/components/style-icons';
 
 describe( 'MasonryIcon', () => {
 	it( 'matches snapshot', () => {

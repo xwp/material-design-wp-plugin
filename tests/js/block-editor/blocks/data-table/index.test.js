@@ -21,7 +21,7 @@ import {
 	name,
 	settings,
 	metadata,
-} from '../../../../../assets/src/block-editor/blocks/data-table';
+} from '../../../../../assets/js/src/block-editor/blocks/data-table';
 
 describe( 'blocks: material/data-table', () => {
 	describe( 'name', () => {

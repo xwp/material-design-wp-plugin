@@ -17,7 +17,7 @@
 /**
  * Internal dependencies
  */
-import { name } from '../../../../../assets/src/block-editor/blocks/button';
+import { name } from '../../../../../assets/js/src/block-editor/blocks/button';
 
 describe( 'blocks: material/button', () => {
 	describe( 'name', () => {

@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import FocusedCardControls from '../../../../../../assets/src/block-editor/blocks/cards-collection/components/focused-card-controls';
+import FocusedCardControls from '../../../../../../assets/js/src/block-editor/blocks/cards-collection/components/focused-card-controls';
 
 /**
  * Render the component.

@@ -17,7 +17,7 @@
 import '@testing-library/jest-dom/extend-expect';
 import { shallow } from 'enzyme';
 
-import Item from '../../../../../assets/src/customizer/components/google-fonts-control/item';
+import Item from '../../../../../assets/js/src/customizer/components/google-fonts-control/item';
 
 /**
  * Render the component

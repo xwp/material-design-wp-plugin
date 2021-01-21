@@ -20,7 +20,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import { Loader } from '../../../../../assets/src/wizard/components/navigation/loader';
+import { Loader } from '../../../../../assets/js/src/wizard/components/navigation/loader';
 
 describe( 'Wizard: Loader', () => {
 	it( 'matches snapshot', () => {

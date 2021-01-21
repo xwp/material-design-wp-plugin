@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import ToolbarUrlInputPopover from '../../../../assets/src/block-editor/components/toolbar-url-input-popover';
+import ToolbarUrlInputPopover from '../../../../assets/js/src/block-editor/components/toolbar-url-input-popover';
 
 /**
  * Render the component.

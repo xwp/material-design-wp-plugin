@@ -110,7 +110,7 @@ const blockEditor = {
 	...sharedConfig,
 	entry: {
 		'block-editor': [
-			'./assets/src/block-editor/index.js',
+			'./assets/js/src/block-editor/index.js',
 			'./assets/css/src/block-editor.css',
 		],
 	},
@@ -122,7 +122,7 @@ const blockEditor = {
 		new CopyWebpackPlugin( {
 			patterns: [
 				{
-					from: './assets/src/block-editor/blocks/*/block.json',
+					from: './assets/js/src/block-editor/blocks/*/block.json',
 					to: './blocks/[1]/block.json',
 					transformPath( targetPath, absolutePath ) {
 						const matches = absolutePath.match(
@@ -169,11 +169,11 @@ const customizer = {
 	...sharedConfig,
 	entry: {
 		'customize-controls': [
-			'./assets/src/customizer/customize-controls.js',
+			'./assets/js/src/customizer/customize-controls.js',
 			'./assets/css/src/customize-controls.css',
 		],
 		'customize-preview': [
-			'./assets/src/customizer/customize-preview.js',
+			'./assets/js/src/customizer/customize-preview.js',
 			'./assets/css/src/customize-preview.css',
 		],
 	},
@@ -192,7 +192,7 @@ const frontEnd = {
 	...sharedConfig,
 	entry: {
 		'front-end': [
-			'./assets/src/front-end/index.js',
+			'./assets/js/src/front-end/index.js',
 			'./assets/css/src/front-end.css',
 		],
 	},
@@ -209,7 +209,7 @@ const admin = {
 	...defaultConfig,
 	...sharedConfig,
 	entry: {
-		admin: [ './assets/src/admin/index.js', './assets/css/src/admin.css' ],
+		admin: [ './assets/js/src/admin/index.js', './assets/css/src/admin.css' ],
 	},
 	plugins: [
 		...sharedConfig.plugins,
@@ -240,7 +240,10 @@ const wizard = {
 	...defaultConfig,
 	...sharedConfig,
 	entry: {
-		wizard: [ './assets/src/wizard/index.js', './assets/css/src/wizard.css' ],
+		wizard: [
+			'./assets/js/src/wizard/index.js',
+			'./assets/css/src/wizard.css',
+		],
 	},
 	plugins: [
 		...sharedConfig.plugins,
@@ -257,7 +260,7 @@ const gsm = {
 	...sharedConfig,
 	entry: {
 		'getting-started': [
-			'./assets/src/getting-started/index.js',
+			'./assets/js/src/getting-started/index.js',
 			'./assets/css/src/getting-started.css',
 		],
 	},

@@ -21,9 +21,9 @@ import {
 	name,
 	settings,
 	metadata,
-} from '../../../../../assets/src/block-editor/blocks/contact-form';
-import Edit from '../../../../../assets/src/block-editor/blocks/contact-form/edit';
-import Save from '../../../../../assets/src/block-editor/blocks/contact-form/save';
+} from '../../../../../assets/js/src/block-editor/blocks/contact-form';
+import Edit from '../../../../../assets/js/src/block-editor/blocks/contact-form/edit';
+import Save from '../../../../../assets/js/src/block-editor/blocks/contact-form/save';
 
 describe( 'blocks: material/contact-form', () => {
 	describe( 'name', () => {

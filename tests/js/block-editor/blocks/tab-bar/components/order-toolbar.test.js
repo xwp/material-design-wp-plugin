@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import OrderToolbar from '../../../../../../assets/src/block-editor/blocks/tab-bar/components/order-toolbar.js';
+import OrderToolbar from '../../../../../../assets/js/src/block-editor/blocks/tab-bar/components/order-toolbar.js';
 
 jest.mock( '@wordpress/block-editor', () => {
 	const original = require.requireActual( '@wordpress/block-editor' );

@@ -23,7 +23,7 @@ import { render, fireEvent } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Gallery from '../../../../../../assets/src/block-editor/blocks/image-list/components/gallery';
+import Gallery from '../../../../../../assets/js/src/block-editor/blocks/image-list/components/gallery';
 
 /**
  * Render the component.

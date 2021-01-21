@@ -24,7 +24,7 @@ import { cloneDeep } from 'lodash';
 /**
  * Internal dependencies
  */
-import Edit from '../../../../../assets/src/block-editor/blocks/card/edit';
+import Edit from '../../../../../assets/js/src/block-editor/blocks/card/edit';
 
 /**
  * Render the component.

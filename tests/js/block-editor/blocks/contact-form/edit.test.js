@@ -24,7 +24,7 @@ import { registerStore } from '@wordpress/data';
 /**
  * Internal dependencies
  */
-import Edit from '../../../../../assets/src/block-editor/blocks/contact-form/edit';
+import Edit from '../../../../../assets/js/src/block-editor/blocks/contact-form/edit';
 
 registerStore( 'core/block-editor', {
 	reducer: jest.fn(),

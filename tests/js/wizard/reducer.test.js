@@ -19,7 +19,7 @@ import '@testing-library/jest-dom/extend-expect';
 /**
  * Internal dependencies
  */
-import { reducer } from '../../../assets/src/wizard/reducer';
+import { reducer } from '../../../assets/js/src/wizard/reducer';
 
 const initialState = {
 	addons: [ 'THEME', 'OVERVIEW' ],

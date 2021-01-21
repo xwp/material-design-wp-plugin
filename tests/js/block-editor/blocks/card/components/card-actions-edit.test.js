@@ -24,7 +24,7 @@ import { shallow } from 'enzyme';
 /**
  * Internal dependencies
  */
-import CardActionsEdit from '../../../../../../assets/src/block-editor/blocks/card/components/card-actions-edit';
+import CardActionsEdit from '../../../../../../assets/js/src/block-editor/blocks/card/components/card-actions-edit';
 
 /**
  * Render the component.

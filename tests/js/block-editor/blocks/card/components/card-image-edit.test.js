@@ -24,7 +24,7 @@ import { shallow, mount } from 'enzyme';
 /**
  * Internal dependencies
  */
-import CardImageEdit from '../../../../../../assets/src/block-editor/blocks/card/components/card-image-edit';
+import CardImageEdit from '../../../../../../assets/js/src/block-editor/blocks/card/components/card-image-edit';
 
 /**
  * Render the component.

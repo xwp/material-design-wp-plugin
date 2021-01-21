@@ -24,7 +24,7 @@ import { act } from 'react-dom/test-utils';
 /**
  * Internal dependencies
  */
-import RecaptchaInspectorControlsPanel from '../../../../../../assets/src/block-editor/blocks/contact-form/components/recaptcha-inspector-controls-panel';
+import RecaptchaInspectorControlsPanel from '../../../../../../assets/js/src/block-editor/blocks/contact-form/components/recaptcha-inspector-controls-panel';
 
 /**
  * Render the component.

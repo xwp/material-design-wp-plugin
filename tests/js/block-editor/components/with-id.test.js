@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import { withId } from '../../../../assets/src/block-editor/components/with-id';
+import { withId } from '../../../../assets/js/src/block-editor/components/with-id';
 
 const TestComponent = withId( () => {
 	return <div>Test Component</div>;

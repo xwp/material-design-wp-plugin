@@ -41,8 +41,8 @@ import Checkboxes from './sections/checkboxes';
 import ImageLists from './sections/image-lists';
 import { materialIconClass, materialIconFontName } from './utils';
 import { Overrides } from './styles';
-import '../../../../css/src/base/variables.css';
-import '../../../../css/src/components/material.css';
+import '../../../../../css/src/base/variables.css';
+import '../../../../../css/src/components/material.css';
 
 /**
  * Adds link tag with appropriate google fonts to head.

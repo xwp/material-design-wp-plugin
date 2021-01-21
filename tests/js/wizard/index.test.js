@@ -19,7 +19,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Wizard from '../../../assets/src/wizard/components';
+import Wizard from '../../../assets/js/src/wizard/components';
 
 describe( 'Onboarding Wizard', () => {
 	beforeAll( () => {

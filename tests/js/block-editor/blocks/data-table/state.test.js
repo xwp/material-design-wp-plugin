@@ -24,7 +24,7 @@ import {
 	insertColumn,
 	deleteColumn,
 	toggleSection,
-} from '../../../../../assets/src/block-editor/blocks/data-table/state';
+} from '../../../../../assets/js/src/block-editor/blocks/data-table/state';
 
 describe( 'Data Table State', () => {
 	it( '`createTable` should create an empty table', () => {

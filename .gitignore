@@ -8,6 +8,7 @@ yarn.lock
 assets/css/*
 !assets/css/src/
 assets/js/*
+!assets/js/src/
 bin/local-dev/mysql/
 bin/local-dev/wordpress/html/
 build/

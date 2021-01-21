@@ -26,7 +26,7 @@ import { render, fireEvent } from '@testing-library/react';
 import {
 	Tab,
 	TabSchema,
-} from '../../../../../../assets/src/block-editor/blocks/tab-bar/components/tab.js';
+} from '../../../../../../assets/js/src/block-editor/blocks/tab-bar/components/tab.js';
 
 jest.mock( '@wordpress/block-editor', () => {
 	const original = require.requireActual( '@wordpress/block-editor' );

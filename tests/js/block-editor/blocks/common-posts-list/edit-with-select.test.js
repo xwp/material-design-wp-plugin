@@ -24,12 +24,12 @@ import { registerStore } from '@wordpress/data';
 /**
  * Internal dependencies
  */
-import EditWithSelect from '../../../../../assets/src/block-editor/blocks/common-posts-list/edit-with-select';
+import EditWithSelect from '../../../../../assets/js/src/block-editor/blocks/common-posts-list/edit-with-select';
 
 // Mock PostsControl component as not relevant in this test and failing to pass tests
 // due to the SearchListControl WooCommerce component.
 jest.mock(
-	'../../../../../assets/src/block-editor/components/posts-control/index.js',
+	'../../../../../assets/js/src/block-editor/components/posts-control/index.js',
 	() => {
 		const PostsControl = () => <div />;
 		return PostsControl;

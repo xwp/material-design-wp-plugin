@@ -23,7 +23,7 @@ import { render, screen } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import ThemePrompt from '../../../../assets/src/customizer/components/theme-prompt';
+import ThemePrompt from '../../../../assets/js/src/customizer/components/theme-prompt';
 
 /**
  * Render the component.

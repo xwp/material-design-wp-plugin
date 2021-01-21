@@ -24,7 +24,7 @@ import { shallow } from 'enzyme';
 /**
  * Internal dependencies
  */
-import CardPrimary from '../../../../../../assets/src/block-editor/blocks/card/components/card-primary';
+import CardPrimary from '../../../../../../assets/js/src/block-editor/blocks/card/components/card-primary';
 
 /**
  * Render the component.

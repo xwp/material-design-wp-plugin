@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Cards from '../../../../../../assets/src/block-editor/blocks/cards-collection/components/cards';
+import Cards from '../../../../../../assets/js/src/block-editor/blocks/cards-collection/components/cards';
 
 /**
  * Render the component.

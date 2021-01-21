@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import ErrorMessage from '../../../../../assets/src/block-editor/components/error-message/index';
+import ErrorMessage from '../../../../../assets/js/src/block-editor/components/error-message/index';
 
 /**
  * Render the component.

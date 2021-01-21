@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import GlobalShapeSize from '../../../../assets/src/block-editor/components/global-shape-size';
+import GlobalShapeSize from '../../../../assets/js/src/block-editor/components/global-shape-size';
 
 /**
  * Render the component.

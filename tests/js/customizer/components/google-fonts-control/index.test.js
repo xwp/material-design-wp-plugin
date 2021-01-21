@@ -24,7 +24,7 @@ import { shallow, mount } from 'enzyme';
 /**
  * Internal dependencies
  */
-import GoogleFontsControl from '../../../../../assets/src/customizer/components/google-fonts-control';
+import GoogleFontsControl from '../../../../../assets/js/src/customizer/components/google-fonts-control';
 
 const jQMock = jest.requireActual( 'jquery' );
 

@@ -20,7 +20,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Header from '../../../../../assets/src/wizard/components/header';
+import Header from '../../../../../assets/js/src/wizard/components/header';
 
 /**
  * Render the component

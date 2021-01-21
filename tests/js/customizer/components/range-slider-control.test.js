@@ -24,7 +24,7 @@ import { mount } from 'enzyme';
 /**
  * Internal dependencies
  */
-import RangeSliderControl from '../../../../assets/src/customizer/components/range-slider-control';
+import RangeSliderControl from '../../../../assets/js/src/customizer/components/range-slider-control';
 
 /**
  * Render the component.

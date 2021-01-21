@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import CardImage from '../../../../../../assets/src/block-editor/blocks/common-posts-list/components/card-image';
+import CardImage from '../../../../../../assets/js/src/block-editor/blocks/common-posts-list/components/card-image';
 
 /**
  * Render the component.

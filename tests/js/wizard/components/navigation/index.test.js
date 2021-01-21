@@ -23,8 +23,8 @@ import { render, cleanup } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Navigation from '../../../../../assets/src/wizard/components/navigation';
-import { StepProvider } from '../../../../../assets/src/wizard/context';
+import Navigation from '../../../../../assets/js/src/wizard/components/navigation';
+import { StepProvider } from '../../../../../assets/js/src/wizard/context';
 
 const setup = () => {
 	return render(

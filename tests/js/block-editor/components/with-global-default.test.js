@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import { withGlobalBlockDefault } from '../../../../assets/src/block-editor/components/with-global-default';
+import { withGlobalBlockDefault } from '../../../../assets/js/src/block-editor/components/with-global-default';
 
 const TestComponent = withGlobalBlockDefault( () => {
 	return <div>Test Component</div>;

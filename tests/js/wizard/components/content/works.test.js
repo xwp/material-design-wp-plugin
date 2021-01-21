@@ -23,8 +23,8 @@ import { render, cleanup } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Work from '../../../../../assets/src/wizard/components/content/work';
-import { StepProvider } from '../../../../../assets/src/wizard/context';
+import Work from '../../../../../assets/js/src/wizard/components/content/work';
+import { StepProvider } from '../../../../../assets/js/src/wizard/context';
 
 const setup = () => {
 	return render(

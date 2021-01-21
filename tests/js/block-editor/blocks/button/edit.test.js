@@ -23,7 +23,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import ButtonEdit from '../../../../../assets/src/block-editor/blocks/button/edit';
+import ButtonEdit from '../../../../../assets/js/src/block-editor/blocks/button/edit';
 
 jest.unmock( '@wordpress/data' );
 jest.mock( '@wordpress/data', () => ( {

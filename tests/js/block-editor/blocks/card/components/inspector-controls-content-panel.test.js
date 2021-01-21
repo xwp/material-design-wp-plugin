@@ -23,7 +23,7 @@ import { render, fireEvent } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import InspectorControlsContentPanel from '../../../../../../assets/src/block-editor/blocks/card/components/inspector-controls-content-panel';
+import InspectorControlsContentPanel from '../../../../../../assets/js/src/block-editor/blocks/card/components/inspector-controls-content-panel';
 
 /**
  * Render the component.

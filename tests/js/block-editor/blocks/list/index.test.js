@@ -21,7 +21,7 @@ import {
 	name,
 	settings,
 	metadata,
-} from '../../../../../assets/src/block-editor/blocks/list';
+} from '../../../../../assets/js/src/block-editor/blocks/list';
 
 describe( 'blocks: material/list', () => {
 	describe( 'name', () => {

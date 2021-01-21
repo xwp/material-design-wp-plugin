@@ -24,7 +24,7 @@ import { shallow } from 'enzyme';
 /**
  * Internal dependencies
  */
-import HandPickedPostsBlockControls from '../../../../../../assets/src/block-editor/blocks/hand-picked-posts/components/block-controls';
+import HandPickedPostsBlockControls from '../../../../../../assets/js/src/block-editor/blocks/hand-picked-posts/components/block-controls';
 
 jest.mock( '@wordpress/block-editor', () => {
 	const original = require.requireActual( '@wordpress/block-editor' );
