@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Save from '../../../../../assets/src/block-editor/blocks/list/save';
+import Save from '../../../../../assets/js/src/block-editor/blocks/list/save';
 
 // Mock the <InnerBlocks> component only, so that the other components in this package behave as usual.
 jest.mock( '@wordpress/block-editor', () => {

@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Image from '../../../../../../assets/src/block-editor/blocks/image-list/components/image';
+import Image from '../../../../../../assets/js/src/block-editor/blocks/image-list/components/image';
 
 /**
  * Render the component.

@@ -21,7 +21,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Button from '../../../../../assets/src/wizard/components/navigation/button';
+import Button from '../../../../../assets/js/src/wizard/components/navigation/button';
 
 /**
  * Render the component

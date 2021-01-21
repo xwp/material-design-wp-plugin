@@ -23,8 +23,8 @@ import { render, cleanup } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import GettingStarted from '../../../assets/src/getting-started/components/index';
-import { TabProvider } from '../../../assets/src/getting-started/context';
+import GettingStarted from '../../../assets/js/src/getting-started/components/index';
+import { TabProvider } from '../../../assets/js/src/getting-started/context';
 
 const setup = () => {
 	return render(

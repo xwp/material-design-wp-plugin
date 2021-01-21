@@ -23,8 +23,8 @@ import { render, cleanup } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Content from '../../../../../assets/src/wizard/components/content';
-import { StepProvider } from '../../../../../assets/src/wizard/context';
+import Content from '../../../../../assets/js/src/wizard/components/content';
+import { StepProvider } from '../../../../../assets/js/src/wizard/context';
 
 describe( 'Wizard: Content', () => {
 	beforeAll( () => {

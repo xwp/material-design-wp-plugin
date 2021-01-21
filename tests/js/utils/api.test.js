@@ -23,7 +23,7 @@ import apiFetch from '@wordpress/api-fetch';
 /**
  * Internal dependencies
  */
-import { getPosts } from '../../../assets/src/block-editor/utils/api';
+import { getPosts } from '../../../assets/js/src/block-editor/utils/api';
 
 const sampleReducedPostsData = [
 	{

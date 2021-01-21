@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Save from '../../../../../assets/src/block-editor/blocks/tab-bar/save';
+import Save from '../../../../../assets/js/src/block-editor/blocks/tab-bar/save';
 
 /**
  * Render the component.

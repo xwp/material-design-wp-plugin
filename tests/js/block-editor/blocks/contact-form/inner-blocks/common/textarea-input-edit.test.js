@@ -25,7 +25,7 @@ import { registerStore } from '@wordpress/data';
 /**
  * Internal dependencies
  */
-import TextareaInputEdit from '../../../../../../../assets/src/block-editor/blocks/contact-form/inner-blocks/common/components/textarea-input-edit';
+import TextareaInputEdit from '../../../../../../../assets/js/src/block-editor/blocks/contact-form/inner-blocks/common/components/textarea-input-edit';
 
 // Mock the <MDCTextField> component as it does not need to be tested here.
 jest.mock( '@material/textfield', () => {

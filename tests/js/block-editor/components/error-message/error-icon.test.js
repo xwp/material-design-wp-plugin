@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import ErrorIcon from '../../../../../assets/src/block-editor/components/error-message/error-icon';
+import ErrorIcon from '../../../../../assets/js/src/block-editor/components/error-message/error-icon';
 
 describe( 'ErrorIcon', () => {
 	it( 'matches snapshot', () => {

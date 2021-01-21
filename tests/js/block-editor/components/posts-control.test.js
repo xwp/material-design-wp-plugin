@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import PostsControl from '../../../../assets/src/block-editor/components/posts-control';
+import PostsControl from '../../../../assets/js/src/block-editor/components/posts-control';
 
 jest.mock( '@woocommerce/components', () => {
 	return {
@@ -34,7 +34,7 @@ jest.mock( '@woocommerce/components', () => {
 } );
 
 jest.mock(
-	'../../../../assets/src/block-editor/hocs/with-searched-posts.js',
+	'../../../../assets/js/src/block-editor/hocs/with-searched-posts.js',
 	() => {
 		return {
 			__esModule: true,

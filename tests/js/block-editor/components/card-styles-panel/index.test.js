@@ -23,7 +23,7 @@ import { render, fireEvent } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import CardStylesPanel from '../../../../../assets/src/block-editor/components/card-styles-panel';
+import CardStylesPanel from '../../../../../assets/js/src/block-editor/components/card-styles-panel';
 
 /**
  * Render the component.

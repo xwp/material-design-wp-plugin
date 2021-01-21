@@ -19,7 +19,7 @@ import '@testing-library/jest-dom/extend-expect';
 /**
  * Internal dependencies
  */
-import { reducer } from '../../../assets/src/getting-started/reducer';
+import { reducer } from '../../../assets/js/src/getting-started/reducer';
 
 const initialState = {
 	activeTab: 'OVERVIEW',

@@ -17,7 +17,7 @@
 /**
  * Internal dependencies
  */
-import { formatError } from '../../../assets/src/block-editor/utils/error';
+import { formatError } from '../../../assets/js/src/block-editor/utils/error';
 
 describe( 'error: formatError', () => {
 	it( 'should return a formatted error message from a complex error from a Json function', async () => {

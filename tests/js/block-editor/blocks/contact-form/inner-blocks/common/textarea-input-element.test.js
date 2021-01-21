@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import TextareaInputElement from '../../../../../../../assets/src/block-editor/blocks/contact-form/inner-blocks/common/components/textarea-input-element';
+import TextareaInputElement from '../../../../../../../assets/js/src/block-editor/blocks/contact-form/inner-blocks/common/components/textarea-input-element';
 
 /**
  * Render the component.

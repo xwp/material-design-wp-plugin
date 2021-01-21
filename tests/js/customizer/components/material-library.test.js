@@ -23,7 +23,7 @@ import { render, screen } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import MaterialLibrary from '../../../../assets/src/customizer/components/material-library';
+import MaterialLibrary from '../../../../assets/js/src/customizer/components/material-library';
 
 /**
  * Render the component.

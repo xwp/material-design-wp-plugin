@@ -29,7 +29,7 @@ import MutationObserver from '@sheerun/mutationobserver-shim';
 import {
 	initReCaptchaToken,
 	initContactForm,
-} from '../../../assets/src/front-end/contact-form';
+} from '../../../assets/js/src/front-end/contact-form';
 
 jest.dontMock( 'fs' );
 

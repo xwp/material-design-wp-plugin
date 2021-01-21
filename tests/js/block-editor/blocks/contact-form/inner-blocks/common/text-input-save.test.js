@@ -24,7 +24,7 @@ import { cloneDeep } from 'lodash';
 /**
  * Internal dependencies
  */
-import TextInputSave from '../../../../../../../assets/src/block-editor/blocks/contact-form/inner-blocks/common/components/text-input-save';
+import TextInputSave from '../../../../../../../assets/js/src/block-editor/blocks/contact-form/inner-blocks/common/components/text-input-save';
 
 /**
  * Render the component.

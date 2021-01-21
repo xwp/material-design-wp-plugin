@@ -24,7 +24,7 @@ import { wait, render, fireEvent } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import MaterialColorPalette from '../../../../assets/src/block-editor/components/material-color-palette';
+import MaterialColorPalette from '../../../../assets/js/src/block-editor/components/material-color-palette';
 
 /**
  * Render the component.

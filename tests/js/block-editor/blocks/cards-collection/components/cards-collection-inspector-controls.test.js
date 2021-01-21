@@ -24,7 +24,7 @@ import { cloneDeep } from 'lodash';
 /**
  * Internal dependencies
  */
-import CardsCollectionInspectorControls from '../../../../../../assets/src/block-editor/blocks/cards-collection/components/cards-collection-inspector-controls';
+import CardsCollectionInspectorControls from '../../../../../../assets/js/src/block-editor/blocks/cards-collection/components/cards-collection-inspector-controls';
 
 /**
  * Render the component in a shallow mode using enzyme.

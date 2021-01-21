@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import CardHeader from '../../../../../../assets/src/block-editor/blocks/common-posts-list/components/card-header';
+import CardHeader from '../../../../../../assets/js/src/block-editor/blocks/common-posts-list/components/card-header';
 
 /**
  * Render the component.

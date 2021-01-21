@@ -20,7 +20,7 @@ import '@testing-library/jest-dom/extend-expect';
 /**
  * Internal dependencies
  */
-import Notice from '../../../../../assets/src/wizard/components/notice';
+import Notice from '../../../../../assets/js/src/wizard/components/notice';
 
 const baseProps = {
 	type: 'notice-error',

@@ -19,7 +19,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import { Logo } from '../../../../../assets/src/wizard/components/svg/logo';
+import { Logo } from '../../../../../assets/js/src/wizard/components/svg/logo';
 
 /**
  * Render the component

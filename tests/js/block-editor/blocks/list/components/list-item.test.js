@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import ListItem from '../../../../../../assets/src/block-editor/blocks/list/components/list-item';
+import ListItem from '../../../../../../assets/js/src/block-editor/blocks/list/components/list-item';
 
 /**
  * Shallow render the component.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import getColumnSpan from '../../../../../../assets/src/block-editor/blocks/cards-collection/utils/get-column-span';
+import getColumnSpan from '../../../../../../assets/js/src/block-editor/blocks/cards-collection/utils/get-column-span';
 
 describe( 'column span', () => {
 	it( 'should equal to 12 when the style is not `grid`', () => {

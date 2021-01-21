@@ -24,7 +24,7 @@ import { registerStore } from '@wordpress/data';
 /**
  * Internal dependencies
  */
-import Edit from '../../../../../assets/src/block-editor/blocks/data-table/edit';
+import Edit from '../../../../../assets/js/src/block-editor/blocks/data-table/edit';
 
 registerStore( 'core/blocks', {
 	reducer: jest.fn(),

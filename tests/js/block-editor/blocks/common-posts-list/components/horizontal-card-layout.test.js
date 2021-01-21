@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import HorizontalCardLayout from '../../../../../../assets/src/block-editor/blocks/common-posts-list/components/horizontal-card-layout';
+import HorizontalCardLayout from '../../../../../../assets/js/src/block-editor/blocks/common-posts-list/components/horizontal-card-layout';
 
 /**
  * Render the component.

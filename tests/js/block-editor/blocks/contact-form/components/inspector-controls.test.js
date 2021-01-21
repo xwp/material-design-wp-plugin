@@ -23,7 +23,7 @@ import { shallow } from 'enzyme';
 /**
  * Internal dependencies
  */
-import FormInspectorControls from '../../../../../../assets/src/block-editor/blocks/contact-form/components/inspector-controls';
+import FormInspectorControls from '../../../../../../assets/js/src/block-editor/blocks/contact-form/components/inspector-controls';
 
 /**
  * Render the component in a shallow mode using enzyme.

@@ -23,11 +23,11 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import NoPosts from '../../../../../../assets/src/block-editor/blocks/common-posts-list/components/no-posts';
+import NoPosts from '../../../../../../assets/js/src/block-editor/blocks/common-posts-list/components/no-posts';
 
 // Mock InspectorControls component as not relevant in this test
 jest.mock(
-	'../../../../../../assets/src/block-editor/blocks/common-posts-list/components/inspector-controls.js',
+	'../../../../../../assets/js/src/block-editor/blocks/common-posts-list/components/inspector-controls.js',
 	() => {
 		const InspectorControls = () => <div />;
 		return InspectorControls;

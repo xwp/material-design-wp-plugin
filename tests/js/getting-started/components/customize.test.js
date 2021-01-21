@@ -23,8 +23,8 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import { Customize } from '../../../../assets/src/getting-started/components/content/customize';
-import { TabProvider } from '../../../../assets/src/getting-started/context';
+import { Customize } from '../../../../assets/js/src/getting-started/components/content/customize';
+import { TabProvider } from '../../../../assets/js/src/getting-started/context';
 
 const setup = () => {
 	return render(

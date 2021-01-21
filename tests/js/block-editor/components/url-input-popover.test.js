@@ -23,7 +23,7 @@ import { fireEvent, render, act } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import UrlInputPopover from '../../../../assets/src/block-editor/components/url-input-popover';
+import UrlInputPopover from '../../../../assets/js/src/block-editor/components/url-input-popover';
 
 /**
  * Render the component.

@@ -24,7 +24,7 @@ import { cloneDeep } from 'lodash';
 /**
  * Internal dependencies
  */
-import Save from '../../../../../assets/src/block-editor/blocks/cards-collection/save';
+import Save from '../../../../../assets/js/src/block-editor/blocks/cards-collection/save';
 
 /**
  * Render the component.

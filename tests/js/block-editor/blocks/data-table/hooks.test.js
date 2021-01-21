@@ -33,10 +33,10 @@ import {
 	withDataTableEdit,
 	addMaterialStyle,
 	save,
-} from '../../../../../assets/src/block-editor/blocks/data-table/hooks';
+} from '../../../../../assets/js/src/block-editor/blocks/data-table/hooks';
 
 jest.mock(
-	'../../../../../assets/src/block-editor/blocks/data-table/edit',
+	'../../../../../assets/js/src/block-editor/blocks/data-table/edit',
 	() => ( {
 		__esModule: true,
 		default: () => <div>Material Data Table Edit Component</div>,

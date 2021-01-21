@@ -20,10 +20,10 @@
 import {
 	name,
 	settings,
-} from '../../../../../../../assets/src/block-editor/blocks/contact-form/inner-blocks/name-input-field';
-import BlockIcon from '../../../../../../../assets/src/block-editor/blocks/contact-form/inner-blocks/name-input-field/block-icon';
-import Edit from '../../../../../../../assets/src/block-editor/blocks/contact-form/inner-blocks/common/components/text-input-edit';
-import Save from '../../../../../../../assets/src/block-editor/blocks/contact-form/inner-blocks/common/components/text-input-save';
+} from '../../../../../../../assets/js/src/block-editor/blocks/contact-form/inner-blocks/name-input-field';
+import BlockIcon from '../../../../../../../assets/js/src/block-editor/blocks/contact-form/inner-blocks/name-input-field/block-icon';
+import Edit from '../../../../../../../assets/js/src/block-editor/blocks/contact-form/inner-blocks/common/components/text-input-edit';
+import Save from '../../../../../../../assets/js/src/block-editor/blocks/contact-form/inner-blocks/common/components/text-input-save';
 
 describe( 'blocks: material/name-input-field', () => {
 	describe( 'name', () => {

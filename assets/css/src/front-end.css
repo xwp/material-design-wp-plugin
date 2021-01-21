@@ -23,6 +23,6 @@
 @import "./components/contact-form.css";
 @import "./components/masonry-grid.css";
 @import "./components/core.css";
-@import "../../src/block-editor/blocks/common-posts-list/style.css";
-@import "../../src/block-editor/blocks/contact-form/inner-blocks/common/style.css";
-@import "../../src/block-editor/blocks/card/style.css";
+@import "../../js/src/block-editor/blocks/common-posts-list/style.css";
+@import "../../js/src/block-editor/blocks/contact-form/inner-blocks/common/style.css";
+@import "../../js/src/block-editor/blocks/card/style.css";

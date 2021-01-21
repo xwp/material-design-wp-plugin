@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import ButtonSave from '../../../../../assets/src/block-editor/blocks/button/save';
+import ButtonSave from '../../../../../assets/js/src/block-editor/blocks/button/save';
 
 const baseProps = {
 	attributes: {

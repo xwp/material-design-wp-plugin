@@ -23,7 +23,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import CardActionButton from '../../../../../../assets/src/block-editor/blocks/card/components/card-action-button';
+import CardActionButton from '../../../../../../assets/js/src/block-editor/blocks/card/components/card-action-button';
 
 /**
  * Render the component.

@@ -24,8 +24,8 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Switch from '../../../../../assets/src/wizard/components/content/switch';
-import { StepProvider } from '../../../../../assets/src/wizard/context';
+import Switch from '../../../../../assets/js/src/wizard/components/content/switch';
+import { StepProvider } from '../../../../../assets/js/src/wizard/context';
 
 const setup = props => {
 	return render(

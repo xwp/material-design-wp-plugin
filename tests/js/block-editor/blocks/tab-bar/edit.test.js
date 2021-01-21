@@ -23,7 +23,7 @@ import { render, fireEvent } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import Edit from '../../../../../assets/src/block-editor/blocks/tab-bar/edit';
+import Edit from '../../../../../assets/js/src/block-editor/blocks/tab-bar/edit';
 
 jest.mock( '@wordpress/blocks', () => ( {
 	getBlockTypes: () => [],

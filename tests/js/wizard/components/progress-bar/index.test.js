@@ -23,8 +23,8 @@ import { render, cleanup } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import ProgressBar from '../../../../../assets/src/wizard/components/progress-bar';
-import { StepProvider } from '../../../../../assets/src/wizard/context';
+import ProgressBar from '../../../../../assets/js/src/wizard/components/progress-bar';
+import { StepProvider } from '../../../../../assets/js/src/wizard/context';
 
 describe( 'Wizard: ProgressBar', () => {
 	afterEach( cleanup );

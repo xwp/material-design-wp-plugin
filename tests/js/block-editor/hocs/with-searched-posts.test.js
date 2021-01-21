@@ -22,8 +22,8 @@ import { shallow } from 'enzyme';
 /**
  * Internal dependencies
  */
-import withSearchedPosts from '../../../../assets/src/block-editor/hocs/with-searched-posts';
-import { getPosts } from '../../../../assets/src/block-editor/utils/api';
+import withSearchedPosts from '../../../../assets/js/src/block-editor/hocs/with-searched-posts';
+import { getPosts } from '../../../../assets/js/src/block-editor/utils/api';
 
 jest.mock( 'lodash', () => {
 	const original = require.requireActual( 'lodash' );
@@ -33,7 +33,7 @@ jest.mock( 'lodash', () => {
 	};
 } );
 
-jest.mock( '../../../../assets/src/block-editor/utils/api', () => {
+jest.mock( '../../../../assets/js/src/block-editor/utils/api', () => {
 	return {
 		getPosts: jest.fn( async () => {
 			return [

@@ -19,7 +19,7 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import { Check } from '../../../../../assets/src/wizard/components/svg/check';
+import { Check } from '../../../../../assets/js/src/wizard/components/svg/check';
 
 /**
  * Render the component
