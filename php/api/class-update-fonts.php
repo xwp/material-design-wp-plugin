@@ -39,6 +39,8 @@ class Update_Fonts extends Updates_API_Base {
 
 	const TRANSIENT = 'google-fonts-json';
 
+	const LAST_UPDATED = 'google-fonts-last-updated';
+
 	/**
 	 * Holds the Google Fonts API key.
 	 *
@@ -103,6 +105,9 @@ class Update_Fonts extends Updates_API_Base {
 			}
 
 			set_transient( self::TRANSIENT, time(), DAY_IN_SECONDS );
+
+			// Save last updated, never expire.
+			set_transient( self::LAST_UPDATED, time() );
 		}
 
 		// If we still don't have fonts, fetch from local.
@@ -208,7 +213,17 @@ class Update_Fonts extends Updates_API_Base {
 		printf( '<div class="error"><p>%s</p></div>', wp_kses_post( $this->material_design_no_apikey() ) );
 	}
 
+	/**
+	 * Check for API key
+	 */
 	public function has_api_key() {
 		return ! empty( $this->api_key );
+	}
+
+	/**
+	 * Get last updated timestamp
+	 */
+	public static function get_last_updated() {
+		return get_transient( self::LAST_UPDATED );
 	}
 }

@@ -281,6 +281,11 @@ class Plugin extends Plugin_Base {
 		return 'ok';
 	}
 
+	/**
+	 * Get Google fonts API key option slug
+	 *
+	 * @return string
+	 */
 	public function get_api_slug() {
 		return self::API_KEY_SLUG;
 	}

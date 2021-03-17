@@ -30,7 +30,9 @@ const Updater = ( {
 	const [ id ] = useState( _uniqueId( 'updater-' ) );
 	const { state, dispatch } = useContext( SettingsContext );
 	const isDisabled = needsKey && 'ok' !== state.apiStatus;
-	const updatedDate = date( 'M n, Y, h:i A', lastUpdated );
+	const updatedDate = lastUpdated
+		? date( 'M n, Y, h:i A', lastUpdated )
+		: __( 'never', 'material-design' );
 	const [ isUpdating, setIsUpdating ] = useState( false );
 	const shouldUpdate = ! isDisabled && state.availableUpdates.includes( type );
 	const shouldNotUpdate =
@@ -39,11 +41,16 @@ const Updater = ( {
 	const handleUpdate = () => {
 		setIsUpdating( true );
 
-		update( type ).then( () => {
+		update( type ).then( response => {
 			setIsUpdating( false );
-			dispatch( { type: ACTIONS.SET_UPDATED, payload: { type } } );
+			dispatch( {
+				type: ACTIONS.SET_UPDATED,
+				payload: {
+					type,
+					lastUpdated: response.lastUpdated,
+				},
+			} );
 		} );
-
 	};
 
 	return (
