@@ -97,7 +97,7 @@
     "eslint-plugin-react": "7.18.3",
     "eslint-utils": "2.0.0",
     "fs-extra": "9.0.0",
-    "grunt": "1.0.4",
+    "grunt": "1.5.2",
     "grunt-contrib-clean": "2.0.0",
     "grunt-contrib-copy": "1.0.0",
     "grunt-shell": "3.0.1",
